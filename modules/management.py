@@ -61,10 +61,13 @@ def login_check():
     for usr in user_list:
         if user_name == usr["user name"] and pass_word == usr["password"] and usr["status"] == True:
             print("login OK!")
+            break
         elif user_name == usr["user name"] and pass_word == usr["password"] and usr["status"] == False:
             print("Error: User Locked!")
+            break
         else:
             print("Error: User Not Found")
+            break
 
 def show_result():
     for user in user_list:
